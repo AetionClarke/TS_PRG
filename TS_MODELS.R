@@ -1,6 +1,6 @@
 
 
-# Ucomment to install packages
+# Uncomment to install packages
 #install.packages("data.table")
 #install.packages("bit64")
 #install.packages("gnm")
@@ -35,6 +35,6 @@ lines( dataTS$T, l$fitted.values, col="firebrick", lwd=2 )
 gn <- gnm( Y ~ T + D1 + D2 + D3 + P, data=dataTS)
 lines( dataTS$T, gn$fitted.values, col="steelblue", lwd=2 )
 
-
+# Because the data is linear the lm and gnm will have the same result
 
 
