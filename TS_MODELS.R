@@ -28,13 +28,13 @@ text( 100, 250, "Interruption 2", col="firebrick", cex=1.3, pos=4 )
 
 
 # Add the regression line
-l <- lm( Y ~ T + D1 + D2 +D3 + P, data=dataTS )
+l <- lm( Y ~ T + D1 + D2 +D3 + P1 +P2, data=dataTS )
 lines( dataTS$T, l$fitted.values, col="firebrick", lwd=2 )
 
 # Add the regression line
-gn <- gnm( Y ~ T + D1 + D2 + D3 + P, data=dataTS)
+gn <- gnm( Y ~ T + D1 + D2 + D3 + P1+P2, data=dataTS)
 lines( dataTS$T, gn$fitted.values, col="steelblue", lwd=2 )
 
-# Because the data is linear the lm and gnm will have the same result
+
 
 
